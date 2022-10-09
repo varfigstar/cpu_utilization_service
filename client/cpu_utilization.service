@@ -2,9 +2,9 @@
 Description=CPU Utilization Client
 
 [Service]
-User=<user e.g. root>
-WorkingDirectory=<directory_of_script e.g. /root>
-ExecStart=env/bin/python -m client.main
+User=root
+WorkingDirectory=/home/cpu_utilization_service
+ExecStart=/home/cpu_utilization_service/env/bin/python -m client.main --URL http://localhost:8000
 Restart=always
 
 [Install]
