@@ -1,0 +1,11 @@
+[Unit]
+Description=CPU Utilization Client
+
+[Service]
+User=<user e.g. root>
+WorkingDirectory=<directory_of_script e.g. /root>
+ExecStart=env/bin/python -m client.main
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
