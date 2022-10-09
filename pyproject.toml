@@ -1,22 +1,29 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = [
+   "setuptools",
+   "wheel"
+]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "cpu_utilization_service_VAFIGSTAR"
-version = "0.0.1"
+name = "cpu_utilization_service_VARFIGSTAR"
+version = "0.0.5"
 authors = [
-  { name="Avel L", email="avel@yandex.ru" },
+  { name="Avel L", email="flamerdazle@yandex.ru" },
 ]
-description = "A small cpu utilization info service"
+description = "A small example package"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.9"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+dependencies = [
+    "Django>4.1<5",
+    "djangorestframework>3.14<4",
+]
 
-[project.urls]
-"Homepage" = "https://github.com/varfigstar/cpu_utilization_service"
-"Bug Tracker" = "https://github.com/varfigstar/cpu_utilization_service/issues"
+
+[project.scripts]
+runserver = "cpu_utlization_service.manage.__main__:main"
