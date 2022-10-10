@@ -11,6 +11,8 @@
 
 ### Run backend
 
+Apply migrations: `env/bin/python cpu_utilization_service/manage.py migrate`
+
 With command `env/bin/python cpu_utilization_service/manage.py runserver`
 
 
